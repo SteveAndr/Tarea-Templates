@@ -5,9 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { NoFoundPageComponent } from './noFoundPage/no-found-page.component';
 
 import { PagesRoutingModule } from './pages/pages-routing.module';
+import { AuthRoutingModule } from './auth/auth-routing.module';
+import { LoginComponent } from './auth/login/login.component';
 const routes:Routes = [
 
-{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'login', component : LoginComponent},
+//{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
 {path: '**', component: NoFoundPageComponent} ,
 
 ];
@@ -17,7 +21,8 @@ const routes:Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-    PagesRoutingModule
+    PagesRoutingModule,
+    AuthRoutingModule
   ],
   exports:[
     RouterModule
@@ -25,4 +30,3 @@ const routes:Routes = [
 })
 export class AppRoutingModule { }
 
-//ADRIAN MUÑOZ

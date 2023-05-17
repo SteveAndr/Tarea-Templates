@@ -9,4 +9,3 @@ export class CategoriesComponent {
 
 }
 
-//ADRIAN MUÑOZ
