@@ -8,5 +8,3 @@ import { Component } from '@angular/core';
 export class ProductsComponent {
 
 }
-
-//ADRIAN MUÑOZ
